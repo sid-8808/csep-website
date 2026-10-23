@@ -12,6 +12,24 @@ body{margin:0;background:#FFFFFF}
 a{color:#143CAA}a:hover{color:#14215C}
 .diag{background-image:repeating-linear-gradient(-60deg,rgba(30,160,220,.08) 0 2px,transparent 2px 28px)}
 @media (min-width: 900px){.site-header{position:sticky;top:0;z-index:40;box-shadow:0 2px 12px rgba(0,0,0,.25)}html{scroll-padding-top:96px}}
+
+.nav-toggle{display:none}
+@media (max-width: 899px){
+.nav-toggle{display:flex}
+.site-header{position:sticky;top:0;z-index:40;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.site-header nav{padding-top:10px !important;padding-bottom:10px !important}
+.site-header nav > a img{height:40px !important}
+.nav-links{display:none !important;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:8px 0 12px}
+.nav-links.open{display:flex !important}
+.nav-links a{padding:14px 0 !important;border-top:1px solid rgba(255,255,255,.1);border-bottom:0 !important}
+.nav-links a:last-child{margin-top:12px;text-align:center;border-top:0}
+.util-tag{display:none}
+html{scroll-padding-top:72px}
+}
+@media (max-width: 600px){
+section > div{padding-top:56px !important;padding-bottom:56px !important}
+.stat-num{font-size:48px !important}
+}
 </style>
 
 <style>html,body{overflow-x:clip}</style>
@@ -24,7 +42,8 @@ a{color:#143CAA}a:hover{color:#14215C}
   <header class="site-header" style="background: #14215C; border-bottom: 1px solid rgba(255,255,255,.1);">
     <nav style="max-width: 1320px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between;">
       <a href="index.html" aria-label="Chiripal Squash Excellence home" style="display: flex;"><img src="assets/logo-white.png" alt="Chiripal Squash Excellence" style="height: 52px; width: auto;"></a>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: .06em; text-transform: uppercase;">
+      <button type="button" class="nav-toggle" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}" onClick="{{toggleMenu}}" style="width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.35); background: transparent; color: #FFFFFF; cursor: pointer; align-items: center; justify-content: center;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2"><path d="{{menuIcon}}"></path></svg></button>
+      <div class="nav-links {{navCls}}" style="display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: .06em; text-transform: uppercase;">
         <a href="competitions.html" style="color: #1EA0DC; text-decoration: none; padding: 10px 0; border-bottom: 3px solid #1EA0DC;">Competitions</a>
         <a href="champions.html" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Champions</a>
         <a href="clinics.html" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Clinics &amp; Camps</a>
@@ -40,7 +59,7 @@ a{color:#143CAA}a:hover{color:#14215C}
   <section class="diag" style="background: #0E1748; color: #FFFFFF;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 72px 24px 56px; display: flex; flex-direction: column; gap: 12px;">
       <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #1EA0DC; font-size: 15px;">COMPETITION</span>
-      <h1 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(52px, 7vw, 96px); line-height: .92; text-transform: uppercase;">Competition calendar 2026–27</h1>
+      <h1 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(40px, 9vw, 96px); line-height: .92; text-transform: uppercase; overflow-wrap: anywhere;">Competition calendar 2026–27</h1>
       <p style="margin: 0; font-size: 18px; color: #D5DBF2; max-width: 640px; line-height: 1.55;">SRFI-ranked events across Gujarat. Entries, draws and results for every Chiripal tournament in one place.</p>
     </div>
   </section>
@@ -49,7 +68,7 @@ a{color:#143CAA}a:hover{color:#14215C}
   <section style="background: #14215C; color: #FFFFFF; border-top: 4px solid #1EA0DC;">
     <div style="max-width: 1320px; margin: 0 auto; padding: 32px 24px; display: flex; flex-direction: column; gap: 16px;">
       <span style="font-size: 13px; font-weight: 700; letter-spacing: .16em; color: #C9CFE6;">2025–26 SEASON · AUG 2025 – AUG 2026</span>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px;">
         <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 48px; line-height: 1; color: #1EA0DC;">5</span><span style="font-size: 13px; font-weight: 700; letter-spacing: .1em;">TOURNAMENTS HOSTED</span></div>
         <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 48px; line-height: 1; color: #1EA0DC;">1,073+</span><span style="font-size: 13px; font-weight: 700; letter-spacing: .1em;">PLAYERS PARTICIPATED</span></div>
         <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 48px; line-height: 1; color: #1EA0DC;">19+</span><span style="font-size: 13px; font-weight: 700; letter-spacing: .1em;">STATES REPRESENTED</span></div>
@@ -198,7 +217,7 @@ class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(s){Object.a
 <script>
 
 class Component extends DCLogic {
-  constructor(p) { super(p); this.state = { tab: 'upcoming', sel: 1, dtab: 'overview' }; }
+  constructor(p) { super(p); this.state = { menuOpen: false, tab: 'upcoming', sel: 1, dtab: 'overview' }; }
   renderVals() {
     var self = this;
     var all = [
@@ -245,6 +264,9 @@ class Component extends DCLogic {
       return { label: d[1], on: on ? 'true' : 'false', pick: function () { self.setState({ dtab: d[0] }); }, style: dBase + (on ? '#1EA0DC;' : 'transparent; color: #C9CFE6;') };
     });
     return {
+      navCls: this.state.menuOpen ? 'open' : '', menuExp: this.state.menuOpen ? 'true' : 'false', menuLabel: this.state.menuOpen ? 'Close menu' : 'Open menu',
+      menuIcon: this.state.menuOpen ? 'M5 5l12 12M17 5L5 17' : 'M3 6h16M3 11h16M3 16h16',
+      toggleMenu: function () { self.setState({ menuOpen: !self.state.menuOpen }); },
       tabs: tabs, events: events, empty: events.length === 0, sel: byId[this.state.sel], dtabs: dtabs,
       showOverview: dtab === 'overview', showEntries: dtab === 'entries', showDraws: dtab === 'draws', showResults: dtab === 'results'
     };
