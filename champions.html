@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Champions | Chiripal Squash Excellence Programme</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1748}
+a{color:#1EA0DC}a:hover{color:#7FD0F5}
+.diag{background-image:repeating-linear-gradient(-60deg,rgba(30,160,220,.08) 0 2px,transparent 2px 28px)}
+.hero-bg{background-image:linear-gradient(0deg,rgba(14,23,72,1) 0%,rgba(14,23,72,.6) 55%,rgba(14,23,72,.35) 100%),url(assets/hero-players.jpg);background-size:cover;background-position:center 20%}
+@media (min-width: 900px){.site-header{position:sticky;top:0;z-index:40;box-shadow:0 2px 12px rgba(0,0,0,.25)}html{scroll-padding-top:96px}}
+</style>
+
+<style>html,body{overflow-x:clip}</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/x-template" id="tpl">
+<div style="font-family: 'DM Sans', system-ui, sans-serif; color: #FFFFFF; background: #0E1748; width: 100%; min-width: 0;">
+
+  <header class="site-header" style="background: #14215C; border-bottom: 1px solid rgba(255,255,255,.1);">
+    <nav style="max-width: 1320px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between;">
+      <a href="index.html" aria-label="Chiripal Squash Excellence home" style="display: flex;"><img src="assets/logo-white.png" alt="Chiripal Squash Excellence" style="height: 52px; width: auto;"></a>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: .06em; text-transform: uppercase;">
+        <a href="competitions.html" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Competitions</a>
+        <a href="champions.html" style="color: #1EA0DC; text-decoration: none; padding: 10px 0; border-bottom: 3px solid #1EA0DC;">Champions</a>
+        <a href="clinics.html" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Clinics &amp; Camps</a>
+        <a href="index.html#pillars" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Coaching</a>
+        <a href="index.html#coe" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Centre of Excellence</a>
+        <a href="index.html#news" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">News</a>
+        <a href="clinics.html" style="background: #1EA0DC; color: #0E1748; text-decoration: none; padding: 12px 22px; border-radius: 2px;">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-bg" style="min-height: 420px; display: flex; align-items: flex-end;">
+    <div style="max-width: 1320px; width: 100%; margin: 0 auto; padding: 64px 24px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #1EA0DC; font-size: 15px;">CHAMPIONS PROGRAMME</span>
+      <h1 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(52px, 7vw, 104px); line-height: .9; text-transform: uppercase;">Our Champions</h1>
+      <p style="margin: 0; font-size: 18px; color: #D5DBF2; max-width: 620px; line-height: 1.55;">India's premier squash players, funded by Chiripal and representing the programme on courts at home and abroad.</p>
+    </div>
+  </section>
+
+  <!-- roster -->
+  <section style="background: #0E1748;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 56px 24px 72px; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: baseline;">
+        <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 32px; text-transform: uppercase;">The squad · 2026–27</h2>
+        <div role="group" aria-label="Filter athletes" style="display: flex; gap: 4px; flex-wrap: wrap;"><sc-for list="{{chips}}" as="c" hint-placeholder-count="4"><button type="button" aria-pressed="{{c.on}}" onClick="{{c.pick}}" style="{{c.style}}">{{c.label}}</button></sc-for></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px;">
+        <sc-for list="{{athletes}}" as="a" hint-placeholder-count="7">
+          <button type="button" onClick="{{a.pick}}" aria-pressed="{{a.on}}" style="{{a.card}}">
+            <img src="{{a.img}}" alt="{{a.name}}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: {{a.pos}}; display: block; background: #1A2A70;">
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 4px; text-align: left;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 26px; text-transform: uppercase; line-height: 1; color: #FFFFFF;">{{a.name}}</span>
+              <span style="color: #C9CFE6; font-size: 14px;"><b style="color: #1EA0DC;">SRFI #{{a.rank}}</b> · {{a.cat}} · {{a.city}}</span>
+            </div>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- profile preview -->
+  <section class="diag" style="background: #14215C;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 40px;">
+      <div style="flex: 1 1 340px; min-width: 0; max-width: 480px; background: #1A2A70; border-bottom: 6px solid #1EA0DC; align-self: flex-start;">
+        <img src="{{sel.prof}}" alt="{{sel.name}}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: {{sel.ppos}}; display: block;">
+      </div>
+      <div style="flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #1EA0DC; font-size: 15px;">ATHLETE PROFILE</span>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span style="font-size: 14px; color: #C9CFE6; margin-right: 6px;">{{pos}} / {{count}}</span>
+              <button type="button" aria-label="Previous athlete: {{prevName}}" onClick="{{prev}}" style="width: 48px; height: 48px; border: 1px solid rgba(255,255,255,.35); background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #FFFFFF;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.5 4L6.5 10l6 6"></path></svg></button>
+              <button type="button" aria-label="Next athlete: {{nextName}}" onClick="{{next}}" style="width: 48px; height: 48px; border: 1px solid rgba(255,255,255,.35); background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #FFFFFF; background: #1EA0DC; border-color: #1EA0DC; color: #0E1748;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.5 4l6 6-6 6"></path></svg></button>
+            </div>
+          </div>
+          <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(44px, 7vw, 72px); line-height: .95; overflow-wrap: anywhere; text-transform: uppercase;">{{sel.name}}</h2>
+          <span style="color: #C9CFE6;">{{sel.cat}} · {{sel.city}}</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 2px; background: rgba(255,255,255,.1);">
+          <div style="background: #14215C; padding: 20px; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 44px; color: #1EA0DC; line-height: 1;">#{{sel.rank}}</span><span style="font-size: 12px; font-weight: 700; letter-spacing: .1em;">SRFI RANK · {{sel.rankCat}}</span></div>
+          <div style="background: #14215C; padding: 20px; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 44px; color: #1EA0DC; line-height: 1;">{{sel.points}}</span><span style="font-size: 12px; font-weight: 700; letter-spacing: .1em;">SRFI POINTS</span></div>
+          <div style="background: #14215C; padding: 20px; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 44px; color: #1EA0DC; line-height: 1;">{{sel.titles}}</span><span style="font-size: 12px; font-weight: 700; letter-spacing: .1em;">2025–26 TITLES</span></div>
+        </div>
+        <sc-if value="{{sel.also}}" hint-placeholder-val="{{ true }}"><span style="color: #C9CFE6; font-size: 14px;">Also ranked: {{sel.also}}</span></sc-if>
+        <span style="color: #C9CFE6; font-size: 13px; margin-top: -12px;">Source: SRFI national rankings, October 2026</span>
+        <div style="display: flex; flex-direction: column; gap: 0;">
+          <h3 style="margin: 0 0 10px; font-size: 14px; font-weight: 700; letter-spacing: .12em; color: #C9CFE6;">2025–26 HIGHLIGHTS</h3>
+          <sc-for list="{{sel.results}}" as="r" hint-placeholder-count="3">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.15);"><span style="font-weight: 700; flex: 1 1 280px; min-width: 0;">{{r.t}}</span><span style="color: #C9CFE6;"><b style="color: #FFFFFF;">{{r.f}}</b> · {{r.d}}</span></div>
+          </sc-for>
+          <sc-if value="{{sel.note}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.15); color: #D5DBF2; line-height: 1.55;">{{sel.note}}</p></sc-if>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+          <sc-if value="{{sel.ig}}" hint-placeholder-val="{{ true }}"><a href="{{sel.igUrl}}" target="_blank" rel="noopener" style="font-weight: 700;">Instagram @{{sel.ig}} →</a></sc-if>
+          <a href="https://www.indiasquash.com/players/ranking" target="_blank" rel="noopener" style="font-weight: 700;">SRFI rankings →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- programme highlights -->
+  <section style="background: #FFFFFF; color: #221F1F;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; flex-direction: column; gap: 8px; max-width: 760px;">
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #143CAA; font-size: 15px;">THE PROGRAMME · 2025–26</span>
+        <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(38px, 6vw, 56px); line-height: 1; overflow-wrap: anywhere; text-transform: uppercase; color: #14215C;">Identifying talent. Enabling performance.</h2>
+        <p style="margin: 0; color: #4A4F63; line-height: 1.55; font-size: 17px;">Champions receive coaching, strength and conditioning, sports science and competition support. Selection is based on results, rankings and coach assessment.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+        <div style="border-top: 4px solid #143CAA; background: #F2F4FA; padding: 24px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 48px; line-height: 1; color: #14215C;">9</span><span style="color: #4A4F63; font-weight: 700;">Athletes across 6 states</span></div>
+        <div style="border-top: 4px solid #143CAA; background: #F2F4FA; padding: 24px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 48px; line-height: 1; color: #14215C;">~Top 6</span><span style="color: #4A4F63; font-weight: 700;">Average national ranking</span></div>
+        <div style="border-top: 4px solid #143CAA; background: #F2F4FA; padding: 24px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 48px; line-height: 1; color: #14215C;">3</span><span style="color: #4A4F63; font-weight: 700;">Juniors represented India at the Asian Junior Championships</span></div>
+        <div style="border-top: 4px solid #143CAA; background: #F2F4FA; padding: 24px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 48px; line-height: 1; color: #14215C;">1st</span><span style="color: #4A4F63; font-weight: 700;">Indian to win the World University individual title</span></div>
+      </div>
+      <button type="button" onClick="{{openApply}}" style="align-self: flex-start; background: #143CAA; color: #FFFFFF; border: 0; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; padding: 16px 28px;">Apply for selection</button>
+    </div>
+  </section>
+
+  <footer style="background: #221F1F; color: #C9CFE6;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14px; align-items: center;">
+      <img src="assets/logo-white.png" alt="Chiripal Squash Excellence" style="height: 40px; width: auto;">
+      <a href="index.html" style="color: #C9CFE6;">Home</a>
+      <a href="competitions.html" style="color: #C9CFE6;">Competitions</a>
+      <a href="clinics.html" style="color: #C9CFE6;">Clinics &amp; Camps</a>
+      <a href="mailto:siddharth.patil@chiripalgroup.com" style="color: #C9CFE6;">siddharth.patil@chiripalgroup.com</a>
+      <a href="tel:+918879466939" style="color: #C9CFE6;">+91 88794 66939</a>
+      <a href="https://www.instagram.com/squashexcellenceprogramme/" target="_blank" rel="noopener" style="color: #C9CFE6;">Instagram</a>
+      <span style="margin-left: auto;">© 2026 Chiripal Group</span>
+    </div>
+  </footer>
+</div>
+
+  <!-- apply modal -->
+  <sc-if value="{{applyOpen}}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="Apply for selection" style="font-family: 'DM Sans', system-ui, sans-serif; position: fixed; inset: 0; z-index: 50; background: rgba(14,23,72,.88); display: flex; justify-content: center; align-items: stretch; padding: 24px 16px; box-sizing: border-box; color: #221F1F;">
+      <div style="width: 100%; max-width: 860px; max-height: 100%; background: #FFFFFF; border-top: 6px solid #1EA0DC; display: flex; flex-direction: column; overflow: hidden;">
+        <div style="padding: 20px 24px; border-bottom: 1px solid #DDE2F0; display: flex; gap: 16px; align-items: center; justify-content: space-between;">
+          <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0;">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #143CAA; font-size: 14px;">CHAMPIONS PROGRAMME</span>
+            <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 36px; line-height: 1; text-transform: uppercase; color: #14215C;">Apply for selection</h2>
+          </div>
+          <button type="button" aria-label="Close application" onClick="{{closeApply}}" style="width: 44px; height: 44px; flex-shrink: 0; border: 1px solid #B9C1DA; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#14215C" stroke-width="2"><path d="M3 3l12 12M15 3L3 15"></path></svg></button>
+        </div>
+        <div style="overflow-y: auto; padding: 24px;">
+          <sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; flex-direction: column; gap: 32px;">
+              <p style="margin: 0; color: #4A4F63; line-height: 1.6;">Selection is based on results, rankings and coach assessment. Fields marked <span style="color: #143CAA;">*</span> are required.</p>
+              <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px;"><legend style="padding: 0 0 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">Player</legend><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-name" style="font-weight: 700; font-size: 14px;">Full name <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-name" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-dob" style="font-weight: 700; font-size: 14px;">Date of birth <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-dob" type="date" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-gender" style="font-weight: 700; font-size: 14px;">Gender <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="ap-gender" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option>Select</option><option>Male</option><option>Female</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-cat" style="font-weight: 700; font-size: 14px;">Playing category <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="ap-cat" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option>Select</option><option>Men</option><option>Women</option><option>Boys U19</option><option>Boys U17</option><option>Boys U15</option><option>Boys U13</option><option>Boys U11</option><option>Girls U19</option><option>Girls U17</option><option>Girls U15</option><option>Girls U13</option><option>Girls U11</option></select></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-city" style="font-weight: 700; font-size: 14px;">City <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-city" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-state" style="font-weight: 700; font-size: 14px;">State <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-state" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div></fieldset><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px;"><legend style="padding: 0 0 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">Squash profile</legend><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-srfi" style="font-weight: 700; font-size: 14px;">SRFI player ID <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-srfi" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><span style="font-size: 13px; color: #4A4F63;">As on indiasquash.com</span></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-rank" style="font-weight: 700; font-size: 14px;">Current SRFI ranking <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="ap-rank" type="text" placeholder="e.g. #8 Boys U13" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-club" style="font-weight: 700; font-size: 14px;">Club / academy <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-club" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-coach" style="font-weight: 700; font-size: 14px;">Current coach <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-coach" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-school" style="font-weight: 700; font-size: 14px;">School / college <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="ap-school" type="text" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-yrs" style="font-weight: 700; font-size: 14px;">Years playing <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-yrs" type="number" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><div style="display: flex; flex-direction: column; gap: 6px;"><label for="ap-results" style="font-weight: 700; font-size: 14px;">Best results, last 12 months <span aria-hidden="true" style="color: #143CAA;">*</span></label><textarea id="ap-results" required style="min-height: 110px; padding: 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; resize: vertical; box-sizing: border-box; width: 100%;" placeholder="Tournament · category · finish · month"></textarea></div></fieldset><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px;"><legend style="padding: 0 0 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">Contact</legend><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-parent" style="font-weight: 700; font-size: 14px;">Parent / guardian name <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="ap-parent" type="text" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><span style="font-size: 13px; color: #4A4F63;">Required for players under 18</span></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-phone" style="font-weight: 700; font-size: 14px;">WhatsApp number <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-phone" type="tel" required placeholder="+91" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-email" style="font-weight: 700; font-size: 14px;">Email <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-email" type="email" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-ig" style="font-weight: 700; font-size: 14px;">Instagram handle <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="ap-ig" type="text" placeholder="@" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div></fieldset><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px;"><legend style="padding: 0 0 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">Documents</legend><div style="display: flex; flex-direction: column; gap: 6px;"><label for="ap-cv" style="font-weight: 700; font-size: 14px;">Sports CV <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ap-cv" type="file" required accept=".pdf,.doc,.docx" style="padding: 12px; border: 2px dashed #B9C1DA; background: #F7F8FC; font-size: 15px; font-family: inherit; min-height: 48px; box-sizing: border-box; width: 100%;"><span style="font-size: 13px; color: #4A4F63;">PDF or Word, up to 5 MB. Include results, rankings, training history and goals.</span></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ap-video" style="font-weight: 700; font-size: 14px;">Match video link <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="ap-video" type="text" placeholder="YouTube or Google Drive link" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div></fieldset><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px;"><legend style="padding: 0 0 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">Consent</legend><label for="ap-c1" style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; min-height: 44px;"><input id="ap-c1" type="checkbox" required style="width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0;"> The information above is accurate, and I agree to Chiripal Squash Excellence contacting me about selection.</label><label for="ap-c2" style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; min-height: 44px;"><input id="ap-c2" type="checkbox" required style="width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0;"> For players under 18: I am the parent or guardian and consent to this application.</label></fieldset>
+              <button type="button" onClick="{{submitApply}}" style="align-self: flex-start; height: 56px; padding: 0 32px; border: 0; background: #143CAA; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; cursor: pointer;">Submit application</button>
+            </div>
+          </sc-if>
+          <sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 16px; padding: 24px 0;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #143CAA; font-size: 15px;">APPLICATION RECEIVED</span>
+              <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 44px; line-height: 1; text-transform: uppercase; color: #14215C;">Thank you for applying</h3>
+              <p style="margin: 0; color: #4A4F63; line-height: 1.6; max-width: 560px;">Our team reviews every application. Shortlisted players will be contacted on WhatsApp within [N WEEKS] for a coach assessment.</p>
+              <button type="button" onClick="{{closeApply}}" style="align-self: flex-start; height: 48px; padding: 0 22px; border: 2px solid #143CAA; background: transparent; color: #143CAA; font-weight: 700; font-size: 16px; font-family: inherit; cursor: pointer;">Close</button>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</script>
+
+<script>
+class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(s){Object.assign(this.state,s);__render()}forceUpdate(){__render()}}
+</script>
+<script>
+
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { sel: 0, f: 'all', applyOpen: false, sent: false }; }
+  renderVals() {
+    var self = this;
+    var roster = [
+ {
+  "name": "Suraj Chand",
+  "img": "assets/players/suraj-3.jpg",
+  "pos": "55% 30%",
+  "prof": "assets/players/suraj-3.jpg",
+  "ppos": "55% 30%",
+  "cat": "Men",
+  "city": "Mumbai",
+  "ig": "suraj_chand_",
+  "rank": 3,
+  "rankCat": "MEN",
+  "points": "1,749.55",
+  "titles": 6,
+  "also": "",
+  "note": "Selected to represent India at the Asian Games in Japan.",
+  "results": [
+   {
+    "t": "FISU World University Squash Championship, Mumbai",
+    "f": "Gold (individual), silver (team)",
+    "d": "Aug 2026"
+   },
+   {
+    "t": "HCL PSA Challenger Tour $6K, Kolkata",
+    "f": "Semi-final",
+    "d": "Aug 2026"
+   },
+   {
+    "t": "Eastern Slam 2026, Chhattisgarh",
+    "f": "Winner",
+    "d": "Jun 2026"
+   },
+   {
+    "t": "HCL PSA Challenger Tour $6K, Chennai",
+    "f": "Winner",
+    "d": "Apr 2026"
+   }
+  ]
+ },
+ {
+  "name": "Vedant Patel",
+  "img": "assets/players/vedant-3.jpg",
+  "pos": "50% 25%",
+  "prof": "assets/players/vedant-2.jpg",
+  "ppos": "50% 40%",
+  "cat": "Men",
+  "city": "Gujarat",
+  "ig": "vedantp.99",
+  "rank": 10,
+  "rankCat": "MEN",
+  "points": "863.2",
+  "titles": 3,
+  "also": "",
+  "note": "",
+  "results": [
+   {
+    "t": "Chiripal Gujarat State Closed Championship 2026 (1 Star)",
+    "f": "Winner",
+    "d": "Aug 2026"
+   },
+   {
+    "t": "Otters Club Squash Tournament 2026 (4 Star)",
+    "f": "Winner",
+    "d": "May 2026"
+   },
+   {
+    "t": "Chiripal Ahmedabad Squash Open 2026 (2 Star)",
+    "f": "Winner",
+    "d": "Jan 2026"
+   },
+   {
+    "t": "Woodruff-Nee Trophy, USA (PSA 3K)",
+    "f": "Pre-quarter-final",
+    "d": "Jun 2026"
+   }
+  ]
+ },
+ {
+  "name": "Gurveer Singh",
+  "img": "assets/players/gurveer-2.jpg",
+  "pos": "50% 20%",
+  "prof": "assets/players/gurveer-3.jpg",
+  "ppos": "68% 50%",
+  "cat": "Men",
+  "city": "New Delhi",
+  "ig": "singhgurveer27",
+  "rank": 12,
+  "rankCat": "MEN",
+  "points": "780.25",
+  "titles": "—",
+  "also": "Boys U19 #19",
+  "note": "Joined June 2026, moving up from juniors to the men’s tour.",
+  "results": [
+   {
+    "t": "World Squash Junior Championships 2026, Canada",
+    "f": "Bronze (team), top 32 (individual)",
+    "d": "Jul 2026"
+   }
+  ]
+ },
+ {
+  "name": "Tanishka Jain",
+  "img": "assets/players/tanishkaa-1.jpg",
+  "pos": "50% 25%",
+  "prof": "assets/players/tanishkaa-2.jpg",
+  "ppos": "50% 25%",
+  "cat": "Women",
+  "city": "Mumbai",
+  "ig": "tanishkaj08",
+  "rank": 56,
+  "rankCat": "WOMEN",
+  "points": "150",
+  "titles": "—",
+  "also": "",
+  "note": "Represented India as a junior, competed for the University of the West of England in Bristol and played PSA events. Now back in India, training at the Cricket Club of India and rebuilding towards the top of the women’s game.",
+  "results": []
+ },
+ {
+  "name": "Riyaa Dalal",
+  "img": "assets/players/riya-1.jpg",
+  "pos": "50% 30%",
+  "prof": "assets/players/riya-4.jpg",
+  "ppos": "50% 40%",
+  "cat": "Girls U13",
+  "city": "Mumbai",
+  "ig": "",
+  "rank": 1,
+  "rankCat": "GIRLS U13",
+  "points": "2,160",
+  "titles": 2,
+  "also": "",
+  "note": "",
+  "results": [
+   {
+    "t": "Little Masters Willingdon Open 2026",
+    "f": "Winner, Girls U13",
+    "d": "Jan 2026"
+   },
+   {
+    "t": "5th Juhu Gymkhana Squash Open 2026",
+    "f": "Winner, Girls U13",
+    "d": "Jan 2026"
+   },
+   {
+    "t": "Western Slam 2026, Mumbai",
+    "f": "3rd, Girls U13",
+    "d": "Apr 2026"
+   },
+   {
+    "t": "Hong Kong Junior Squash Open 2026",
+    "f": "9th, Girls U13",
+    "d": "Aug 2026"
+   }
+  ]
+ },
+ {
+  "name": "Nirvaan Parikh",
+  "img": "assets/players/nirvaan-1.jpg",
+  "pos": "50% 30%",
+  "prof": "assets/players/nirvaan-3.jpg",
+  "ppos": "50% 40%",
+  "cat": "Boys U13",
+  "city": "Mumbai",
+  "ig": "",
+  "rank": 8,
+  "rankCat": "BOYS U13",
+  "points": "1,033.5",
+  "titles": 1,
+  "also": "",
+  "note": "",
+  "results": [
+   {
+    "t": "Matunga Gymkhana Junior Squash Open 2026",
+    "f": "Winner, Boys U13",
+    "d": "Sep 2026"
+   },
+   {
+    "t": "49th Maharashtra State Open 2026",
+    "f": "Runner-up, Boys U13",
+    "d": "Sep 2026"
+   },
+   {
+    "t": "Bengal Junior Open Championship 2026",
+    "f": "3rd, Boys U13",
+    "d": "Sep 2026"
+   }
+  ]
+ },
+ {
+  "name": "Arnaa Dwivedi",
+  "img": "assets/players/arnaa-dwivedi-1.jpg",
+  "pos": "50% 35%",
+  "prof": "assets/players/arnaa-dwivedi-3.jpg",
+  "ppos": "50% 30%",
+  "cat": "Girls U15",
+  "city": "Hyderabad",
+  "ig": "arnaadwivedi11",
+  "rank": 9,
+  "rankCat": "GIRLS U15",
+  "points": "1,238.25",
+  "titles": 2,
+  "also": "Girls U17 #16",
+  "note": "",
+  "results": [
+   {
+    "t": "Telangana Closed 2026",
+    "f": "Winner, U19 · Runner-up, Women",
+    "d": "Jul 2026"
+   },
+   {
+    "t": "ICSE Squash 2026–27, AP/Telangana region",
+    "f": "Winner",
+    "d": "Jul 2026"
+   },
+   {
+    "t": "Telangana Squash Open",
+    "f": "Runner-up",
+    "d": "Jul 2026"
+   },
+   {
+    "t": "Bengal Open",
+    "f": "3rd",
+    "d": "Aug 2026"
+   }
+  ]
+ },
+ {
+  "name": "Diva Parasrampuria",
+  "img": "assets/players/diva-1.jpg",
+  "pos": "50% 30%",
+  "prof": "assets/players/diva-3.jpg",
+  "ppos": "45% 40%",
+  "cat": "Girls U15",
+  "city": "Chennai",
+  "ig": "",
+  "rank": 6,
+  "rankCat": "GIRLS U15",
+  "points": "1,575",
+  "titles": "—",
+  "also": "",
+  "note": "",
+  "results": [
+   {
+    "t": "80th CCI Western India, Mumbai",
+    "f": "Runner-up",
+    "d": "Dec 2025"
+   },
+   {
+    "t": "Little Masters Willingdon Open 2026",
+    "f": "Runner-up",
+    "d": "Jan 2026"
+   },
+   {
+    "t": "Dutch Junior Open 2026, Amsterdam",
+    "f": "4th",
+    "d": "Jul 2026"
+   },
+   {
+    "t": "European Junior Open 2026, Hamburg",
+    "f": "5th",
+    "d": "Jul 2026"
+   }
+  ]
+ },
+ {
+  "name": "Aadya Budhia",
+  "img": "assets/players/aadya-budhia-1.jpg",
+  "pos": "50% 25%",
+  "prof": "assets/players/aadya-budhia-3.jpg",
+  "ppos": "50% 30%",
+  "cat": "Girls U17",
+  "city": "Jharkhand",
+  "ig": "aadya.budhia",
+  "rank": 1,
+  "rankCat": "GIRLS U17",
+  "points": "2,565",
+  "titles": 5,
+  "also": "Women #11 · Girls U19 #14",
+  "note": "",
+  "results": [
+   {
+    "t": "Hong Kong Junior Squash Open 2026",
+    "f": "Winner, Girls U17",
+    "d": "Aug 2026"
+   },
+   {
+    "t": "Chiripal Ahmedabad Squash Open 2026",
+    "f": "Winner, Women",
+    "d": "Jan 2026"
+   },
+   {
+    "t": "Tusk Investment 3rd Eastern Challenger, Kolkata",
+    "f": "Winner, Women",
+    "d": "Apr 2026"
+   },
+   {
+    "t": "Eastern Slam 2026, Chhattisgarh",
+    "f": "Winner, Girls U17",
+    "d": "Jun 2026"
+   }
+  ]
+ }
+];
+    var base = 'display: flex; flex-direction: column; padding: 0; background: #14215C; cursor: pointer; font-family: inherit; color: inherit; border: 2px solid ';
+    var all = roster.map(function (r, i) {
+      var on = self.state.sel === i;
+      return Object.assign({}, r, {
+        idx: i, igUrl: 'https://www.instagram.com/' + r.ig + '/', junior: r.cat !== 'Men' && r.cat !== 'Women',
+        on: on ? 'true' : 'false',
+        card: base + (on ? '#1EA0DC;' : 'transparent;'),
+        pick: function () { self.setState({ sel: i }); }
+      });
+    });
+    var f = this.state.f;
+    var athletes = all.filter(function (a) { return f === 'all' || (f === 'junior' ? a.junior : a.cat === f); });
+    var ring = athletes.some(function (a) { return a.idx === self.state.sel; }) ? athletes : all;
+    var navPos = Math.max(0, ring.findIndex(function (a) { return a.idx === self.state.sel; }));
+    var cBase = 'min-height: 44px; padding: 0 16px; border: 1px solid #3A4C9A; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer;';
+    var chips = [['all', 'All'], ['Men', 'Men'], ['Women', 'Women'], ['junior', 'Juniors']].map(function (c) {
+      var on = f === c[0];
+      return { label: c[1], on: on ? 'true' : 'false', pick: function () { self.setState({ f: c[0] }); },
+        style: cBase + (on ? 'background: #1EA0DC; color: #0E1748; border-color: #1EA0DC;' : 'background: transparent; color: #FFFFFF;') };
+    });
+    return {
+      athletes: athletes, chips: chips, sel: all[this.state.sel],
+      pos: navPos + 1, count: ring.length, prevName: ring[(navPos - 1 + ring.length) % ring.length].name, nextName: ring[(navPos + 1) % ring.length].name,
+      prev: function () { self.setState({ sel: ring[(navPos - 1 + ring.length) % ring.length].idx }); },
+      next: function () { self.setState({ sel: ring[(navPos + 1) % ring.length].idx }); },
+      applyOpen: this.state.applyOpen, sent: this.state.sent, notSent: !this.state.sent,
+      openApply: function () { self.setState({ applyOpen: true, sent: false }); },
+      closeApply: function () { self.setState({ applyOpen: false }); },
+      submitApply: function () { self.setState({ sent: true }); }
+    };
+  }
+}
+
+</script>
+<script>
+(function(){
+var TPL=document.getElementById('tpl').textContent, root=document.getElementById('root'), comp=new Component({}), H=[];
+function get(c,p){p=p.trim();if(p==='true')return true;if(p==='false')return false;return p.split('.').reduce(function(o,k){return o==null?undefined:o[k]},c)}
+function esc(v){return v==null?'':String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+function proc(t,c){
+ t=t.replace(/<sc-for\s+list="\{\{\s*([\w.]+)\s*\}\}"\s+as="(\w+)"[^>]*>([\s\S]*?)<\/sc-for>/g,function(m,l,as,b){return (get(c,l)||[]).map(function(it,i){var n=Object.assign({},c);n[as]=it;n.$index=i;return proc(b,n)}).join('')});
+ var re=/<sc-if\s+value="\{\{\s*([\w.]+)\s*\}\}"[^>]*>((?:(?!<sc-if)[\s\S])*?)<\/sc-if>/g; while(re.test(t)){re.lastIndex=0; t=t.replace(re,function(m,v,b){return get(c,v)?b:''});}
+ t=t.replace(/onClick="\{\{\s*([\w.]+)\s*\}\}"/gi,function(m,p){H.push(get(c,p));return 'data-h="'+(H.length-1)+'"'});
+ return t.replace(/\{\{\s*([\w.$]+)\s*\}\}/g,function(m,p){return esc(get(c,p))});
+}
+window.__render=function(){
+ var keep={};root.querySelectorAll('input[id],select[id]').forEach(function(e){keep[e.id]=e.type==='checkbox'?e.checked:e.value});
+ H=[];root.innerHTML=proc(TPL,comp.renderVals());
+ root.querySelectorAll('input[id],select[id]').forEach(function(e){if(e.id in keep){if(e.type==='checkbox')e.checked=keep[e.id];else e.value=keep[e.id]}});
+ root.querySelectorAll('[data-h]').forEach(function(e){var f=H[+e.getAttribute('data-h')];if(f)e.addEventListener('click',function(ev){f(ev)})});
+};
+__render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiripal Squash Excellence Programme</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1748}
+a{color:#1EA0DC}a:hover{color:#7FD0F5}
+.hero-bg{background-image:linear-gradient(90deg,rgba(14,23,72,1) 0%,rgba(14,23,72,.9) 35%,rgba(14,23,72,.15) 65%,rgba(14,23,72,.35) 100%),url(assets/players/hero-suraj.jpg);background-color:#0E1748;background-repeat:no-repeat;background-size:auto 100%;background-position:right center}
+.diag{background-image:repeating-linear-gradient(-60deg,rgba(30,160,220,.08) 0 2px,transparent 2px 28px)}
+@media (min-width: 900px){.site-header{position:sticky;top:0;z-index:40;box-shadow:0 2px 12px rgba(0,0,0,.25)}html{scroll-padding-top:96px}}
+</style>
+
+<style>html,body{overflow-x:clip}</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/x-template" id="tpl">
+<div style="font-family: 'DM Sans', system-ui, sans-serif; color: #FFFFFF; background: #0E1748; width: 100%; min-width: 0;">
+
+  <!-- utility bar -->
+  <div style="background: #221F1F; padding: 8px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center; font-size: 13px; color: #C9CFE6;">
+    <span>Building the next generation of Indian squash · Gujarat, India</span>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+      <a href="https://www.instagram.com/squashexcellenceprogramme/" target="_blank" rel="noopener" style="color: #C9CFE6; text-decoration: none;">Instagram</a>
+      <button type="button" onClick="{{openPartner}}" style="background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; font-size: 13px; color: #C9CFE6;">Partner with us</button>
+      <button type="button" onClick="{{openContact}}" style="background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; font-size: 13px; color: #C9CFE6;">Contact</button>
+    </div>
+  </div>
+
+  <!-- nav -->
+  <header class="site-header" style="background: #14215C; border-bottom: 1px solid rgba(255,255,255,.1);">
+    <nav style="max-width: 1320px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between;">
+      <a href="index.html" aria-label="Chiripal Squash Excellence home" style="display: flex;"><img src="assets/logo-white.png" alt="Chiripal Squash Excellence" style="height: 52px; width: auto;"></a>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: .06em; text-transform: uppercase;">
+        <a href="competitions.html" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Competitions</a>
+        <a href="champions.html" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Champions</a>
+        <a href="clinics.html" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Clinics &amp; Camps</a>
+        <a href="#pillars" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Coaching</a>
+        <a href="#coe" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">Centre of Excellence</a>
+        <a href="#news" style="color: #FFFFFF; text-decoration: none; padding: 10px 0;">News</a>
+        <a href="clinics.html" style="background: #1EA0DC; color: #0E1748; text-decoration: none; padding: 12px 22px; border-radius: 2px;">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- next event ticker -->
+  <div style="background: #143CAA; padding: 12px 24px;">
+    <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; justify-content: space-between;">
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center;">
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: .12em; background: #FFFFFF; color: #143CAA; padding: 4px 10px;">NEXT EVENT</span>
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 22px; text-transform: uppercase;">Heritage Squash Open 2026</span>
+        <span style="color: #DCE6FF;">Rajkot · 1–4 December 2026</span>
+      </div>
+      <a href="competitions.html" style="color: #FFFFFF; font-weight: 700;">Entry details →</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <section class="hero-bg" style="min-height: 620px; display: flex; align-items: center; position: relative;">
+    <div style="max-width: 1320px; width: 100%; margin: 0 auto; padding: 80px 24px; box-sizing: border-box;">
+      <div style="max-width: 640px; display: flex; flex-direction: column; gap: 24px;">
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; font-size: 16px; color: #1EA0DC; text-transform: uppercase;">Chiripal Squash Excellence Programme</span>
+        <h1 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(56px, 8vw, 112px); line-height: .9; text-transform: uppercase; letter-spacing: -.01em;">From local courts<br><span style="color: #1EA0DC;">to the world stage.</span></h1>
+        <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #D5DBF2; max-width: 520px;">Coaching, clinics, competition and champions — one pathway for Gujarat's squash players, from first rally to the PSA World Tour.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px;">
+          <a href="clinics.html" style="background: #1EA0DC; color: #0E1748; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; padding: 16px 28px;">Join a clinic</a>
+          <a href="competitions.html" style="border: 2px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; padding: 14px 26px;">View calendar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- stats -->
+  <section class="diag" style="background: #14215C; border-top: 4px solid #1EA0DC;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 48px 24px 40px; display: flex; flex-direction: column; gap: 24px;">
+      <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #C9CFE6; font-size: 14px;">IMPACT · AUGUST 2025 – AUGUST 2026</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px;">
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 72px; line-height: 1; color: #1EA0DC;">1,300+</span><span style="text-transform: uppercase; letter-spacing: .12em; font-size: 14px; font-weight: 700;">Players reached</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 72px; line-height: 1; color: #1EA0DC;">5</span><span style="text-transform: uppercase; letter-spacing: .12em; font-size: 14px; font-weight: 700;">Tournaments hosted</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 72px; line-height: 1; color: #1EA0DC;">6</span><span style="text-transform: uppercase; letter-spacing: .12em; font-size: 14px; font-weight: 700;">Clinics conducted</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 72px; line-height: 1; color: #1EA0DC;">9</span><span style="text-transform: uppercase; letter-spacing: .12em; font-size: 14px; font-weight: 700;">Champions supported</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- tournaments -->
+  <section style="background: #FFFFFF; color: #221F1F;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 36px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #143CAA; font-size: 15px;">COMPETITION</span>
+          <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(38px, 6vw, 56px); line-height: 1; overflow-wrap: anywhere; text-transform: uppercase; color: #14215C;">Upcoming competitions</h2>
+        </div>
+        <a href="competitions.html" style="color: #143CAA; font-weight: 700;">Full calendar →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <article style="border: 1px solid #DDE2F0; border-top: 6px solid #143CAA; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; justify-content: space-between; gap: 8px;"><span style="background: #14215C; color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: .1em; padding: 4px 8px;">SRFI 2 STAR</span><span style="color: #143CAA; font-size: 13px; font-weight: 700;">ENTRIES OPENING</span></div>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #14215C;">1–4 DEC</span>
+          <h3 style="margin: 0; font-size: 21px; line-height: 1.25;">Heritage Squash Open 2026</h3>
+          <span style="color: #4A4F63; font-size: 15px;">Rajkot · [VENUE]</span>
+          <a href="competitions.html" style="margin-top: auto; color: #143CAA; font-weight: 700;">Event details →</a>
+        </article>
+        <article style="border: 1px solid #DDE2F0; border-top: 6px solid #1EA0DC; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; justify-content: space-between; gap: 8px;"><span style="background: #1EA0DC; color: #0E1748; font-size: 12px; font-weight: 700; letter-spacing: .1em; padding: 4px 8px;">CAMP</span><span style="color: #4A4F63; font-size: 13px; font-weight: 700;">TO BE CONFIRMED</span></div>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #14215C;">MID-JAN 2027</span>
+          <h3 style="margin: 0; font-size: 21px; line-height: 1.25;">High Performance Camp</h3>
+          <span style="color: #4A4F63; font-size: 15px;">Ahmedabad / Ranchi · [VENUE TBC]</span>
+          <a href="clinics.html" style="margin-top: auto; color: #143CAA; font-weight: 700;">Register interest →</a>
+        </article>
+        <article style="border: 1px solid #DDE2F0; border-top: 6px solid #143CAA; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; justify-content: space-between; gap: 8px;"><span style="background: #14215C; color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: .1em; padding: 4px 8px;">SRFI 2 STAR</span><span style="color: #4A4F63; font-size: 13px; font-weight: 700;">PRIZE ₹15K / ₹9K</span></div>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; color: #14215C;">END-FEB 2027</span>
+          <h3 style="margin: 0; font-size: 21px; line-height: 1.25;">[EVENT NAME]</h3>
+          <span style="color: #4A4F63; font-size: 15px;">Baroda / Ahmedabad · [VENUE TBC]</span>
+          <a href="competitions.html" style="margin-top: auto; color: #143CAA; font-weight: 700;">Event details →</a>
+        </article>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; background: #F2F4FA; padding: 18px 24px;">
+        <span style="font-weight: 700; font-size: 13px; letter-spacing: .1em; color: #4A4F63;">LATEST RESULT</span>
+        <span style="font-weight: 700;">Baroda Squash Open 2026 · 14–17 Sep</span>
+        <span style="color: #4A4F63;">157 athletes from 19 states across 11 categories, the inaugural edition</span>
+        <a href="competitions.html" style="color: #143CAA; font-weight: 700; margin-left: auto;">Draws &amp; results →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- pillars -->
+  <section id="pillars" class="diag" style="background: #0E1748;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 8px; max-width: 720px;">
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #1EA0DC; font-size: 15px;">THE PATHWAY</span>
+        <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(38px, 6vw, 56px); line-height: 1; overflow-wrap: anywhere; text-transform: uppercase;">Four pillars. One programme.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; background: rgba(255,255,255,.08);">
+        <a href="#" style="background: #14215C; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: #FFFFFF; min-height: 260px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; color: #1EA0DC;">01</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 40px; text-transform: uppercase; line-height: 1;">Coaching</span>
+          <span style="color: #C9CFE6; line-height: 1.55;">Structured coaching at Sports Club, Ahmedabad since August 2025, with 100+ players trained across all age groups.</span>
+          <span style="margin-top: auto; font-weight: 700; color: #1EA0DC;">Train with us →</span>
+        </a>
+        <a href="clinics.html" style="background: #14215C; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: #FFFFFF; min-height: 260px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; color: #1EA0DC;">02</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 40px; text-transform: uppercase; line-height: 1;">Clinics &amp; Camps</span>
+          <span style="color: #C9CFE6; line-height: 1.55;">Two-day city clinics before major tournaments, plus international camps with guest coaches.</span>
+          <span style="margin-top: auto; font-weight: 700; color: #1EA0DC;">Find a clinic →</span>
+        </a>
+        <a href="competitions.html" style="background: #14215C; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: #FFFFFF; min-height: 260px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; color: #1EA0DC;">03</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 40px; text-transform: uppercase; line-height: 1;">Competition</span>
+          <span style="color: #C9CFE6; line-height: 1.55;">SRFI-ranked tournaments across Gujarat — Baroda, Rajkot, Ahmedabad — run with the state association.</span>
+          <span style="margin-top: auto; font-weight: 700; color: #1EA0DC;">See the calendar →</span>
+        </a>
+        <a href="champions.html" style="background: #14215C; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: #FFFFFF; min-height: 260px;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; color: #1EA0DC;">04</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 40px; text-transform: uppercase; line-height: 1;">Champions</span>
+          <span style="color: #C9CFE6; line-height: 1.55;">India's premier players, funded and represented by Chiripal on courts around the world.</span>
+          <span style="margin-top: auto; font-weight: 700; color: #1EA0DC;">Meet the athletes →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- champions spotlight -->
+  <section style="background: #14215C;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+      <div style="flex: 1 1 420px; min-width: 0; max-width: 520px;">
+        <img src="assets/players/vedant-2.jpg" alt="Vedant Patel in match play" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 40%; display: block; border-bottom: 6px solid #1EA0DC;">
+      </div>
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #1EA0DC; font-size: 15px;">CHAMPIONS PROGRAMME</span>
+        <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(38px, 6vw, 56px); line-height: 1; text-transform: uppercase; overflow-wrap: anywhere;">9 athletes. 6 states. Ranked among India's best.</h2>
+        <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid rgba(255,255,255,.15);">
+          <li style="display: flex; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; color: #1EA0DC; width: 48px;">#1</span><span style="font-weight: 700; flex: 1;">Aadya Budhia</span><span style="color: #C9CFE6; font-size: 14px;">Girls U17</span></li>
+          <li style="display: flex; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; color: #1EA0DC; width: 48px;">#1</span><span style="font-weight: 700; flex: 1;">Riyaa Dalal</span><span style="color: #C9CFE6; font-size: 14px;">Girls U13</span></li>
+          <li style="display: flex; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; color: #1EA0DC; width: 48px;">#3</span><span style="font-weight: 700; flex: 1;">Suraj Chand</span><span style="color: #C9CFE6; font-size: 14px;">Men</span></li>
+          <li style="display: flex; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; color: #1EA0DC; width: 48px;">#6</span><span style="font-weight: 700; flex: 1;">Diva Parasrampuria</span><span style="color: #C9CFE6; font-size: 14px;">Girls U15</span></li>
+          <li style="display: flex; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15);"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; color: #1EA0DC; width: 48px;">#10</span><span style="font-weight: 700; flex: 1;">Vedant Patel</span><span style="color: #C9CFE6; font-size: 14px;">Men</span></li>
+        </ol>
+        <span style="color: #C9CFE6; font-size: 13px;">SRFI national rankings, October 2026</span>
+        <a href="champions.html" style="align-self: flex-start; background: #1EA0DC; color: #0E1748; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; padding: 16px 28px;">All Champions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- news -->
+  <section id="news" style="background: #FFFFFF; color: #221F1F;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 36px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end;">
+        <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(38px, 6vw, 56px); line-height: 1; overflow-wrap: anywhere; text-transform: uppercase; color: #14215C;">Latest news</h2>
+        <button type="button" onClick="{{openNews}}" style="background: none; border: 0; padding: 10px 0; cursor: pointer; color: #143CAA; font-weight: 700; font-size: 16px; font-family: inherit; text-decoration: underline;">All news →</button>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+        <a href="#news" onClick="{{openSuraj}}" style="flex: 2 1 560px; min-width: 0; text-decoration: none; color: #221F1F; display: flex; flex-direction: column; gap: 14px;">
+          <img src="assets/players/suraj-3.jpg" alt="Suraj Chand celebrating with the Indian flag" style="width: 100%; height: 380px; object-fit: cover; object-position: center 30%; display: block;">
+          <span style="font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #143CAA;">CHAMPIONS · AUGUST 2026</span>
+          <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 34px; line-height: 1.05; text-transform: uppercase; color: #14215C;">Suraj Chand becomes India's first World University squash champion</h3>
+          <span style="color: #4A4F63; line-height: 1.55;">Gold in the individual event and silver with the team at the FISU World University Squash Championship in Mumbai. Next stop: the Asian Games in Japan.</span>
+        </a>
+        <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 24px; min-width: 0;">
+          <a href="#news" onClick="{{openGurveer}}" style="text-decoration: none; color: #221F1F; display: flex; flex-direction: column; gap: 10px;">
+            <img src="assets/players/gurveer-3.jpg" alt="Gurveer Singh in match play" style="width: 100%; height: 170px; object-fit: cover; object-position: 70% center; display: block;">
+            <span style="font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #143CAA;">CHAMPIONS · JULY 2026</span>
+            <h3 style="margin: 0; font-size: 20px; line-height: 1.3;">Gurveer Singh wins team bronze at the World Squash Junior Championships in Canada</h3>
+          </a>
+          <a href="#news" onClick="{{openAadya}}" style="text-decoration: none; color: #221F1F; display: flex; flex-direction: column; gap: 10px;">
+            <img src="assets/players/aadya-budhia-3.jpg" alt="Aadya Budhia with a trophy" style="width: 100%; height: 170px; object-fit: cover; object-position: center 25%; display: block;">
+            <span style="font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #143CAA;">RESULTS · AUGUST 2026</span>
+            <h3 style="margin: 0; font-size: 20px; line-height: 1.3;">Aadya Budhia wins Girls U17 at the Hong Kong Junior Squash Open</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- instagram -->
+  <section style="background: #0E1748; color: #FFFFFF;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: flex-end; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 8px; min-width: 0;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #1EA0DC; font-size: 15px;">ON INSTAGRAM</span>
+          <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(32px, 5vw, 48px); line-height: 1; text-transform: uppercase; overflow-wrap: anywhere;">@squashexcellenceprogramme</h2>
+        </div>
+        <a href="https://www.instagram.com/squashexcellenceprogramme/" target="_blank" rel="noopener" style="display: flex; gap: 10px; align-items: center; background: #1EA0DC; color: #0E1748; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; padding: 12px 24px;"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0E1748" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#0E1748" stroke="none"></circle></svg>Follow us</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px;">
+        <a href="https://www.instagram.com/squashexcellenceprogramme/reel/DerlpS5ombF/" target="_blank" rel="noopener" aria-label="Reel, 19 Oct 2026: State-level squash championship" style="position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #14215C;"><img src="assets/instagram/ig-1.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;"><span aria-hidden="true" style="position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; background: rgba(0,0,0,.45); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="#FFFFFF"><path d="M3 1.5v9l7.5-4.5z"></path></svg></span></a><a href="https://www.instagram.com/squashexcellenceprogramme/reel/Dej1s90IU7X/" target="_blank" rel="noopener" aria-label="Reel, 16 Oct 2026: Proud to be part of her journey to the top" style="position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #14215C;"><img src="assets/instagram/ig-2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;"><span aria-hidden="true" style="position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; background: rgba(0,0,0,.45); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="#FFFFFF"><path d="M3 1.5v9l7.5-4.5z"></path></svg></span></a><a href="https://www.instagram.com/squashexcellenceprogramme/p/DeSSJwNo2Z7/" target="_blank" rel="noopener" aria-label="Post, 9 Oct 2026: World Squash Day" style="position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #14215C;"><img src="assets/instagram/ig-3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a><a href="https://www.instagram.com/squashexcellenceprogramme/p/Dd_Ka1vIMzg/" target="_blank" rel="noopener" aria-label="Post, 2 Oct 2026: Suraj Chand wins bronze at the Asian Games" style="position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #14215C;"><img src="assets/instagram/ig-4.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a><a href="https://www.instagram.com/squashexcellenceprogramme/p/Dd_J4CRonIb/" target="_blank" rel="noopener" aria-label="Post, 2 Oct 2026: India men’s team bronze at the Asian Games" style="position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #14215C;"><img src="assets/instagram/ig-5.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a><a href="https://www.instagram.com/squashexcellenceprogramme/reel/DdtvflWihlU/" target="_blank" rel="noopener" aria-label="Reel, 25 Sep 2026: Riyaa Dalal, runner-up at the Indian Juniors Open" style="position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #14215C;"><img src="assets/instagram/ig-8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;"><span aria-hidden="true" style="position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; background: rgba(0,0,0,.45); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="#FFFFFF"><path d="M3 1.5v9l7.5-4.5z"></path></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- centre of excellence -->
+  <section id="coe" class="diag" style="background: #143CAA;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 80px 24px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between;">
+      <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #FFFFFF; font-size: 15px;">CENTRE OF EXCELLENCE</span>
+        <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(36px, 5.5vw, 52px); line-height: 1; overflow-wrap: anywhere; text-transform: uppercase;">A home for high performance</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #E3EAFF; max-width: 560px;">We're building a dedicated coaching and high-performance academy in Gujarat. Register your interest to hear first.</p>
+      </div>
+      <button type="button" onClick="{{openCoe}}" style="background: #FFFFFF; color: #143CAA; border: 0; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; padding: 16px 28px;">Register interest</button>
+    </div>
+  </section>
+
+  <!-- partners -->
+  <section style="background: #F2F4FA; color: #221F1F;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 64px 24px; display: flex; flex-direction: column; gap: 24px; align-items: center;">
+      <span style="font-size: 13px; font-weight: 700; letter-spacing: .16em; color: #4A4F63;">OUR ECOSYSTEM PARTNERS</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; width: 100%;">
+        <div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/agsra.png" alt="All Gujarat Squash Racquet Association" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/sportsclub.png" alt="Sports Club, Ahmedabad" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/willingdon.png" alt="The Willingdon Sports Club" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/shoukry.png" alt="Shoukry Squash Academy" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/ara.png" alt="Ahmedabad Racquet Academy" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/shakti.png" alt="Shakti Sports Club" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/rajkumar.png" alt="The Rajkumar College, Rajkot" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/tges.png" alt="TGES, The Galaxy Education System" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/sgvp.png" alt="SGVP Holistic Hospital" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/wellness.png" alt="The Wellness Co." style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/monkeytrip.png" alt="Monkey Trip" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div><div style="height: 112px; padding: 16px 20px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE2F0; display: flex; align-items: center; justify-content: center;"><img src="assets/partners/bridge.png" alt="The Bridge" style="max-width: 100%; max-height: 72px; object-fit: contain; display: block;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer style="background: #221F1F; color: #C9CFE6;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 64px 24px 32px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+        <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 16px;">
+          <img src="assets/logo-white.png" alt="Chiripal Squash Excellence" style="height: 56px; width: auto; align-self: flex-start;">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: .14em; color: #FFFFFF;">RISE. RALLY. REPEAT.</span>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 15px;">
+            <a href="mailto:siddharth.patil@chiripalgroup.com" style="color: #C9CFE6;">siddharth.patil@chiripalgroup.com</a>
+            <a href="tel:+918879466939" style="color: #C9CFE6;">+91 88794 66939</a>
+            <a href="https://www.instagram.com/squashexcellenceprogramme/" target="_blank" rel="noopener" style="color: #C9CFE6;">Instagram @squashexcellenceprogramme</a>
+          </div>
+        </div>
+        <div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 12px;">
+          <label for="news-email" style="font-weight: 700; color: #FFFFFF;">Get tournament &amp; clinic updates</label>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <input id="news-email" type="email" placeholder="you@email.com" style="flex: 1 1 200px; min-width: 0; height: 48px; padding: 0 14px; border: 1px solid #4A4F63; background: #2E2A2A; color: #FFFFFF; font-size: 16px;">
+            <button type="button" style="height: 48px; padding: 0 22px; border: 0; background: #1EA0DC; color: #0E1748; font-weight: 700; font-size: 16px; cursor: pointer;">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14px; border-top: 1px solid #3A3636; padding-top: 24px;">
+        <a href="competitions.html" style="color: #C9CFE6;">Competitions</a>
+        <a href="champions.html" style="color: #C9CFE6;">Champions</a>
+        <a href="clinics.html" style="color: #C9CFE6;">Clinics &amp; Camps</a>
+        <button type="button" onClick="{{openPartner}}" style="background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; font-size: 14px; color: #C9CFE6; text-decoration: underline;">Partner with us</button>
+        <button type="button" onClick="{{openContact}}" style="background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; font-size: 14px; color: #C9CFE6; text-decoration: underline;">Contact us</button>
+        <a href="#" style="color: #C9CFE6;">Privacy</a>
+        <span style="margin-left: auto;">© 2026 Chiripal Group</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+  <!-- news modal -->
+  <sc-if value="{{newsOpen}}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="{{dialogLabel}}" style="font-family: 'DM Sans', system-ui, sans-serif; position: fixed; inset: 0; z-index: 50; background: rgba(14,23,72,.88); display: flex; justify-content: center; align-items: stretch; padding: 24px 16px; box-sizing: border-box;">
+      <div style="width: 100%; max-width: 980px; max-height: 100%; background: #FFFFFF; color: #221F1F; border-top: 6px solid #1EA0DC; display: flex; flex-direction: column; overflow: hidden;">
+
+        <sc-if value="{{showArticle}}" hint-placeholder-val="{{ true }}">
+          <div style="padding: 16px 24px; border-bottom: 1px solid #DDE2F0; display: flex; gap: 12px; align-items: center; justify-content: space-between;">
+            <button type="button" onClick="{{backToList}}" style="min-height: 44px; padding: 0 14px; border: 1px solid #B9C1DA; background: #FFFFFF; color: #14215C; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer;">← All news</button>
+            <button type="button" aria-label="Close" onClick="{{closeNews}}" style="width: 44px; height: 44px; flex-shrink: 0; border: 1px solid #B9C1DA; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#14215C" stroke-width="2"><path d="M3 3l12 12M15 3L3 15"></path></svg></button>
+          </div>
+          <div style="overflow-y: auto;">
+            <sc-if value="{{art.img}}" hint-placeholder-val="{{ true }}"><img src="{{art.img}}" alt="{{art.alt}}" style="width: 100%; aspect-ratio: 2 / 1; max-height: 400px; object-fit: cover; object-position: {{art.pos}}; display: block;"></sc-if>
+            <div style="padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 14px; max-width: 760px;">
+              <span style="font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #143CAA;">{{art.tagUp}} · {{art.date}}</span>
+              <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: clamp(32px, 5vw, 48px); line-height: 1; text-transform: uppercase; color: #14215C; overflow-wrap: anywhere;">{{art.title}}</h2>
+              <p style="margin: 0; color: #221F1F; font-size: 18px; line-height: 1.7;">{{art.body}}</p>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{showList}}" hint-placeholder-val="{{ false }}">
+          <div style="padding: 20px 24px; border-bottom: 1px solid #DDE2F0; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between;">
+            <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 40px; line-height: 1; text-transform: uppercase; color: #14215C;">News</h2>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
+              <sc-for list="{{newsChips}}" as="c" hint-placeholder-count="4"><button type="button" aria-pressed="{{c.on}}" onClick="{{c.pick}}" style="{{c.style}}">{{c.label}}</button></sc-for>
+              <button type="button" aria-label="Close" onClick="{{closeNews}}" style="width: 44px; height: 44px; flex-shrink: 0; border: 1px solid #B9C1DA; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#14215C" stroke-width="2"><path d="M3 3l12 12M15 3L3 15"></path></svg></button>
+            </div>
+          </div>
+          <div style="overflow-y: auto; padding: 8px 24px 32px; display: flex; flex-direction: column;">
+            <sc-for list="{{news}}" as="n" hint-placeholder-count="6">
+              <button type="button" onClick="{{n.open}}" style="display: flex; flex-wrap: wrap; gap: 20px; padding: 24px 0; border: 0; border-bottom: 1px solid #DDE2F0; background: transparent; text-align: left; cursor: pointer; font-family: inherit; color: inherit; width: 100%;">
+                <div style="flex: 0 1 220px; min-width: 0;">
+                  <sc-if value="{{n.img}}" hint-placeholder-val="{{ true }}"><img src="{{n.img}}" alt="" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: {{n.pos}}; display: block;"></sc-if>
+                  <sc-if value="{{n.noImg}}" hint-placeholder-val="{{ false }}"><div class="diag" style="width: 100%; aspect-ratio: 4 / 3; background-color: #14215C; display: flex; align-items: flex-end; padding: 14px; box-sizing: border-box;"><span style="font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 26px; line-height: 1; color: #FFFFFF; text-transform: uppercase;">{{n.tag}}</span></div></sc-if>
+                </div>
+                <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+                  <span style="font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #143CAA;">{{n.tagUp}} · {{n.date}}</span>
+                  <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.05; text-transform: uppercase; color: #14215C;">{{n.title}}</span>
+                  <span style="color: #143CAA; font-weight: 700;">Read story →</span>
+                </div>
+              </button>
+            </sc-for>
+          </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- contact modal -->
+  <sc-if value="{{contactOpen}}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="Contact us" style="font-family: 'DM Sans', system-ui, sans-serif; position: fixed; inset: 0; z-index: 50; background: rgba(14,23,72,.88); display: flex; justify-content: center; align-items: stretch; padding: 24px 16px; box-sizing: border-box; color: #221F1F;">
+      <div style="width: 100%; max-width: 820px; max-height: 100%; background: #FFFFFF; border-top: 6px solid #1EA0DC; display: flex; flex-direction: column; overflow: hidden;">
+        <div style="padding: 20px 24px; border-bottom: 1px solid #DDE2F0; display: flex; gap: 16px; align-items: center; justify-content: space-between;">
+          <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0;">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #143CAA; font-size: 14px;">GET IN TOUCH</span>
+            <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 36px; line-height: 1; text-transform: uppercase; color: #14215C;">{{contactTitle}}</h2>
+          </div>
+          <button type="button" aria-label="Close contact form" onClick="{{closeContact}}" style="width: 44px; height: 44px; flex-shrink: 0; border: 1px solid #B9C1DA; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#14215C" stroke-width="2"><path d="M3 3l12 12M15 3L3 15"></path></svg></button>
+        </div>
+        <div style="overflow-y: auto; padding: 24px;">
+          <sc-if value="{{cNotSent}}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+              <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+                <legend style="padding: 0 0 10px; font-weight: 700; font-size: 14px;">What would you like to talk about? <span aria-hidden="true" style="color: #143CAA;">*</span></legend>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <sc-for list="{{ctypes}}" as="c" hint-placeholder-count="5"><button type="button" aria-pressed="{{c.on}}" onClick="{{c.pick}}" style="{{c.style}}">{{c.label}}</button></sc-for>
+                </div>
+              </fieldset>
+              <div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ct-name" style="font-weight: 700; font-size: 14px;">Full name <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ct-name" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ct-org" style="font-weight: 700; font-size: 14px;">Organisation <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="ct-org" type="text" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div>
+              <div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ct-email" style="font-weight: 700; font-size: 14px;">Email <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ct-email" type="email" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="ct-phone" style="font-weight: 700; font-size: 14px;">Phone / WhatsApp <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="ct-phone" type="tel" required placeholder="+91" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 6px;"><label for="ct-msg" style="font-weight: 700; font-size: 14px;">Message <span aria-hidden="true" style="color: #143CAA;">*</span></label><textarea id="ct-msg" required placeholder="{{msgHint}}" style="min-height: 130px; padding: 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; resize: vertical; box-sizing: border-box; width: 100%;"></textarea></div>
+              <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+                <button type="button" onClick="{{submitContact}}" style="height: 56px; padding: 0 32px; border: 0; background: #143CAA; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; cursor: pointer;">Send message</button>
+                <div style="display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: #4A4F63;">
+                  <span>Or reach us directly:</span>
+                  <a href="mailto:siddharth.patil@chiripalgroup.com" style="color: #143CAA; font-weight: 700;">siddharth.patil@chiripalgroup.com</a>
+                  <a href="tel:+918879466939" style="color: #143CAA; font-weight: 700;">+91 88794 66939</a>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{cSent}}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 16px; padding: 24px 0;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #143CAA; font-size: 15px;">MESSAGE SENT</span>
+              <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 44px; line-height: 1; text-transform: uppercase; color: #14215C;">Thanks, we'll be in touch</h3>
+              <p style="margin: 0; color: #4A4F63; line-height: 1.6; max-width: 560px;">Your {{ctypeLower}} enquiry has reached the Chiripal Squash Excellence team. We usually reply within [2 working days].</p>
+              <button type="button" onClick="{{closeContact}}" style="align-self: flex-start; height: 48px; padding: 0 22px; border: 2px solid #143CAA; background: transparent; color: #143CAA; font-weight: 700; font-size: 16px; font-family: inherit; cursor: pointer;">Close</button>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- centre of excellence interest modal -->
+  <sc-if value="{{coeOpen}}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="Register interest in the Centre of Excellence" style="font-family: 'DM Sans', system-ui, sans-serif; position: fixed; inset: 0; z-index: 50; background: rgba(14,23,72,.88); display: flex; justify-content: center; align-items: stretch; padding: 24px 16px; box-sizing: border-box; color: #221F1F;">
+      <div style="width: 100%; max-width: 880px; max-height: 100%; background: #FFFFFF; border-top: 6px solid #1EA0DC; display: flex; flex-direction: column; overflow: hidden;">
+        <div style="padding: 20px 24px; border-bottom: 1px solid #DDE2F0; display: flex; gap: 16px; align-items: center; justify-content: space-between;">
+          <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0;">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #143CAA; font-size: 14px;">CENTRE OF EXCELLENCE</span>
+            <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 36px; line-height: 1; text-transform: uppercase; color: #14215C;">Register your interest</h2>
+          </div>
+          <button type="button" aria-label="Close" onClick="{{closeCoe}}" style="width: 44px; height: 44px; flex-shrink: 0; border: 1px solid #B9C1DA; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#14215C" stroke-width="2"><path d="M3 3l12 12M15 3L3 15"></path></svg></button>
+        </div>
+        <div style="overflow-y: auto; padding: 24px;">
+          <sc-if value="{{coeNotSent}}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+              <p style="margin: 0; color: #4A4F63; line-height: 1.6;">We're planning a dedicated coaching and high-performance squash academy in Gujarat. Tell us who you are and we'll keep you updated, and invite you to early conversations.</p>
+              <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+                <legend style="padding: 0 0 10px; font-weight: 700; font-size: 14px;">I'm registering as <span aria-hidden="true" style="color: #143CAA;">*</span></legend>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px;">
+                  <sc-for list="{{coeTypes}}" as="c" hint-placeholder-count="5"><button type="button" aria-pressed="{{c.on}}" onClick="{{c.pick}}" style="{{c.style}}"><span style="display: block; font-weight: 700; font-size: 16px;">{{c.label}}</span><span style="display: block; font-size: 13px; font-weight: 400; margin-top: 4px; opacity: .85;">{{c.sub}}</span></button></sc-for>
+                </div>
+              </fieldset>
+              <sc-if value="{{coeNoType}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 16px; background: #F2F4FA; color: #4A4F63;">Choose an option above to see the relevant questions.</p></sc-if>
+              <sc-if value="{{coeHasType}}" hint-placeholder-val="{{ true }}">
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">Your details</h3>
+                  <div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-name" style="font-weight: 700; font-size: 14px;">Full name <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="co-name" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-city" style="font-weight: 700; font-size: 14px;">City <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="co-city" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div>
+                  <div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-email" style="font-weight: 700; font-size: 14px;">Email <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="co-email" type="email" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-phone" style="font-weight: 700; font-size: 14px;">Phone / WhatsApp <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="co-phone" type="tel" required placeholder="+91" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div>
+                </div>
+              </sc-if>
+              <sc-if value="{{coeIndiv}}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px; border-top: 1px solid #DDE2F0;"><h3 style="margin: 16px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">About the player</h3><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-i-role" style="font-weight: 700; font-size: 14px;">I am <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-i-role" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>A player</option><option>A parent / guardian of a player</option><option>An adult who wants to learn</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-i-age" style="font-weight: 700; font-size: 14px;">Player age group <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-i-age" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Under 9</option><option>U11</option><option>U13</option><option>U15</option><option>U17</option><option>U19</option><option>Adult (19+)</option></select></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-i-level" style="font-weight: 700; font-size: 14px;">Current level <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-i-level" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>New to squash</option><option>Club / recreational</option><option>State-ranked</option><option>National-ranked</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-i-loc" style="font-weight: 700; font-size: 14px;">Preferred location <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-i-loc" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Ahmedabad</option><option>Vadodara</option><option>Rajkot</option><option>Surat</option><option>Other</option></select></div></div><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px;"><legend style="padding: 0 0 8px; font-weight: 700; font-size: 14px;">Interested in <span style="font-weight: 400; color: #4A4F63;">(select all that apply)</span></legend><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;"><label for="co-i-prog-0" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-prog-0" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> High-performance training</label><label for="co-i-prog-1" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-prog-1" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> After-school coaching</label><label for="co-i-prog-2" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-prog-2" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Holiday camps</label><label for="co-i-prog-3" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-prog-3" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Fitness & strength conditioning</label><label for="co-i-prog-4" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-prog-4" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Court booking & membership</label><label for="co-i-prog-5" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-prog-5" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Hostel / residential programme</label></div></fieldset><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px;"><legend style="padding: 0 0 8px; font-weight: 700; font-size: 14px;">Preferred training times <span style="font-weight: 400; color: #4A4F63;">(select all that apply)</span></legend><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;"><label for="co-i-time-0" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-time-0" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Weekday mornings</label><label for="co-i-time-1" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-time-1" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Weekday evenings</label><label for="co-i-time-2" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-i-time-2" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Weekends</label></div></fieldset></div></sc-if><sc-if value="{{coeBrand}}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px; border-top: 1px solid #DDE2F0;"><h3 style="margin: 16px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">About your brand</h3><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-b-co" style="font-weight: 700; font-size: 14px;">Company / brand name <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="co-b-co" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-b-role" style="font-weight: 700; font-size: 14px;">Your designation <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="co-b-role" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-b-web" style="font-weight: 700; font-size: 14px;">Website <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="co-b-web" type="url" placeholder="https://" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-b-ind" style="font-weight: 700; font-size: 14px;">Industry <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-b-ind" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Sportswear & equipment</option><option>Health & nutrition</option><option>Banking & finance</option><option>Automobile</option><option>FMCG</option><option>Education</option><option>Real estate</option><option>Technology</option><option>Other</option></select></div></div><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px;"><legend style="padding: 0 0 8px; font-weight: 700; font-size: 14px;">Partnership interests <span style="font-weight: 400; color: #4A4F63;">(select all that apply)</span></legend><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;"><label for="co-b-int-0" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-b-int-0" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Academy naming rights</label><label for="co-b-int-1" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-b-int-1" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Court & venue branding</label><label for="co-b-int-2" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-b-int-2" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Kit / apparel partner</label><label for="co-b-int-3" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-b-int-3" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Event & tournament sponsorship</label><label for="co-b-int-4" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-b-int-4" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Athlete sponsorship</label><label for="co-b-int-5" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-b-int-5" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> CSR & grassroots programmes</label></div></fieldset><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-b-bud" style="font-weight: 700; font-size: 14px;">Indicative annual budget <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-b-bud" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Under ₹10 lakh</option><option>₹10–25 lakh</option><option>₹25–50 lakh</option><option>₹50 lakh–1 crore</option><option>Above ₹1 crore</option><option>Prefer to discuss</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-b-when" style="font-weight: 700; font-size: 14px;">When would you like to start? <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-b-when" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Within 3 months</option><option>3–6 months</option><option>6–12 months</option><option>Exploring for now</option></select></div></div></div></sc-if><sc-if value="{{coeInv}}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px; border-top: 1px solid #DDE2F0;"><h3 style="margin: 16px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">About your investment interest</h3><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-v-org" style="font-weight: 700; font-size: 14px;">Organisation / fund <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="co-v-org" type="text" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-v-role" style="font-weight: 700; font-size: 14px;">Your designation <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="co-v-role" type="text" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-v-type" style="font-weight: 700; font-size: 14px;">Investor type <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-v-type" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Individual / HNI</option><option>Family office</option><option>Fund / VC</option><option>Corporate / strategic</option><option>Real estate / developer</option><option>Other</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-v-li" style="font-weight: 700; font-size: 14px;">LinkedIn profile <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="co-v-li" type="url" placeholder="https://linkedin.com/in/" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px;"><legend style="padding: 0 0 8px; font-weight: 700; font-size: 14px;">Interested in <span style="font-weight: 400; color: #4A4F63;">(select all that apply)</span></legend><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;"><label for="co-v-int-0" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-v-int-0" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Equity in the academy</label><label for="co-v-int-1" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-v-int-1" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Land or facility development</label><label for="co-v-int-2" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-v-int-2" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Operating / management partnership</label><label for="co-v-int-3" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-v-int-3" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Franchise or multi-city expansion</label><label for="co-v-int-4" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-v-int-4" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Debt / structured funding</label></div></fieldset><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-v-size" style="font-weight: 700; font-size: 14px;">Indicative ticket size <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-v-size" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Under ₹50 lakh</option><option>₹50 lakh–2 crore</option><option>₹2–5 crore</option><option>Above ₹5 crore</option><option>Prefer to discuss</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-v-when" style="font-weight: 700; font-size: 14px;">Investment horizon <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-v-when" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Within 6 months</option><option>6–12 months</option><option>12+ months</option><option>Exploring for now</option></select></div></div></div></sc-if><sc-if value="{{coeCoach}}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px; border-top: 1px solid #DDE2F0;"><h3 style="margin: 16px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">About your coaching</h3><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-c-cert" style="font-weight: 700; font-size: 14px;">Highest certification <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-c-cert" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>WSF Level 1</option><option>WSF Level 2</option><option>WSF Level 3</option><option>SRFI certified</option><option>Other / none yet</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-c-yrs" style="font-weight: 700; font-size: 14px;">Years coaching <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="co-c-yrs" type="number" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div></div><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px;"><legend style="padding: 0 0 8px; font-weight: 700; font-size: 14px;">Interested in <span style="font-weight: 400; color: #4A4F63;">(select all that apply)</span></legend><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;"><label for="co-c-int-0" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-c-int-0" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Full-time role</label><label for="co-c-int-1" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-c-int-1" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Part-time role</label><label for="co-c-int-2" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-c-int-2" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Guest clinics & camps</label><label for="co-c-int-3" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-c-int-3" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Strength & conditioning / sports science</label></div></fieldset></div></sc-if><sc-if value="{{coeInst}}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px; border-top: 1px solid #DDE2F0;"><h3 style="margin: 16px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #14215C;">About your institution</h3><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-s-name" style="font-weight: 700; font-size: 14px;">School / club name <span aria-hidden="true" style="color: #143CAA;">*</span></label><input id="co-s-name" type="text" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-s-type" style="font-weight: 700; font-size: 14px;">Type <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-s-type" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>School</option><option>College / university</option><option>Sports club</option><option>Residential society</option><option>Other</option></select></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-s-n" style="font-weight: 700; font-size: 14px;">Approx. number of students / members <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><input id="co-s-n" type="number" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-s-loc" style="font-weight: 700; font-size: 14px;">City <span aria-hidden="true" style="color: #143CAA;">*</span></label><select id="co-s-loc" required style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Ahmedabad</option><option>Vadodara</option><option>Rajkot</option><option>Surat</option><option>Other</option></select></div></div><fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px;"><legend style="padding: 0 0 8px; font-weight: 700; font-size: 14px;">Interested in <span style="font-weight: 400; color: #4A4F63;">(select all that apply)</span></legend><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;"><label for="co-s-int-0" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-s-int-0" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> In-school squash programme</label><label for="co-s-int-1" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-s-int-1" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Training access for students / members</label><label for="co-s-int-2" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-s-int-2" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Inter-school competitions</label><label for="co-s-int-3" style="display: flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #DDE2F0; background: #F7F8FC; font-size: 15px; cursor: pointer;"><input id="co-s-int-3" type="checkbox" style="width: 18px; height: 18px; flex-shrink: 0;"> Affiliation with the academy</label></div></fieldset></div></sc-if>
+              <sc-if value="{{coeHasType}}" hint-placeholder-val="{{ true }}">
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <div style="display: flex; flex-direction: column; gap: 6px;"><label for="co-msg" style="font-weight: 700; font-size: 14px;">Anything else you would like us to know? <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><textarea id="co-msg" placeholder="Questions, ideas, or what would make the academy right for you" style="min-height: 100px; padding: 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; resize: vertical; box-sizing: border-box; width: 100%;"></textarea></div>
+                  <div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; min-width: 0;"><label for="co-src" style="font-weight: 700; font-size: 14px;">How did you hear about us? <span style="font-weight: 400; color: #4A4F63;">(optional)</span></label><select id="co-src" style="height: 48px; padding: 0 12px; border: 1px solid #B9C1DA; font-size: 16px; font-family: inherit; background: #FFFFFF; box-sizing: border-box; width: 100%;"><option value="">Select</option><option>Instagram</option><option>A tournament or clinic</option><option>Friend or family</option><option>School / club</option><option>News / media</option><option>Other</option></select></div>
+                  <label for="co-consent" style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; min-height: 44px;"><input id="co-consent" type="checkbox" required style="width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0;"> I agree to Chiripal Squash Excellence storing these details and contacting me about the Centre of Excellence. For players under 18, a parent or guardian is submitting this form.</label>
+                  <button type="button" onClick="{{submitCoe}}" style="align-self: flex-start; height: 56px; padding: 0 32px; border: 0; background: #143CAA; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; cursor: pointer;">Register interest</button>
+                </div>
+              </sc-if>
+            </div>
+          </sc-if>
+          <sc-if value="{{coeSent}}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 16px; padding: 24px 0;">
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .2em; color: #143CAA; font-size: 15px;">YOU'RE ON THE LIST</span>
+              <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 44px; line-height: 1; text-transform: uppercase; color: #14215C;">Thank you for your interest</h3>
+              <p style="margin: 0; color: #4A4F63; line-height: 1.6; max-width: 580px;">{{coeThanks}}</p>
+              <button type="button" onClick="{{closeCoe}}" style="align-self: flex-start; height: 48px; padding: 0 22px; border: 2px solid #143CAA; background: transparent; color: #143CAA; font-weight: 700; font-size: 16px; font-family: inherit; cursor: pointer;">Close</button>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</script>
+
+<script>
+class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(s){Object.assign(this.state,s);__render()}forceUpdate(){__render()}}
+</script>
+<script>
+
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { newsOpen: false, nf: 'All', art: -1, contactOpen: false, ctype: '', cSent: false, coeOpen: false, coeType: '', coeSent: false }; }
+  renderVals() {
+    var self = this;
+    var all = [{"tag": "Results", "date": "Oct 2026", "title": "Chiripal delivers the SGFI State Level Squash Competition", "body": "Chiripal ran the School Games Federation of India state competition at Veer Savarkar Sports Complex: team and individual events for boys and girls U14, U17 and U19. Rajkot City won all six team titles, and 30 players were selected for the state squad.", "img": "", "pos": "center", "alt": "Chiripal delivers the SGFI State Level Squash Competition"}, {"tag": "Results", "date": "Sep 2026", "title": "Baroda Squash Open draws 157 players from 19 states", "body": "The inaugural Chiripal Presents Baroda Squash Open, powered by Shakti Sports Club, ran over four days in Vadodara as an SRFI 2 Star event. 29 Gujarat players competed and 10 reached the quarter-finals or better.", "img": "", "pos": "center", "alt": "Baroda Squash Open draws 157 players from 19 states"}, {"tag": "Champions", "date": "Aug 2026", "title": "Suraj Chand becomes India’s first World University squash champion", "body": "Gold in the individual event and silver with the team at the FISU World University Squash Championship in Mumbai. Suraj now ranks #3 in India and will represent the country at the Asian Games in Japan.", "img": "assets/players/suraj-3.jpg", "pos": "center 30%", "alt": "Suraj Chand becomes India’s first World University squash champion"}, {"tag": "Champions", "date": "Aug 2026", "title": "Aadya Budhia wins Girls U17 at the Hong Kong Junior Squash Open", "body": "Aadya, India’s #1 in Girls U17, added an international title to wins at the Chiripal Ahmedabad Squash Open and the Tusk Investment Eastern Challenger.", "img": "assets/players/aadya-budhia-3.jpg", "pos": "center 25%", "alt": "Aadya Budhia wins Girls U17 at the Hong Kong Junior Squash Open"}, {"tag": "Programme", "date": "Aug 2026", "title": "One year of Chiripal Squash Excellence", "body": "From August 2025 to August 2026: 1,300+ players reached, 9 athletes supported, 5 coaches upskilled, 6 clinics, 5 tournaments hosted and 8 strategic partnerships across 4 states.", "img": "assets/poster.jpg", "pos": "center 30%", "alt": "One year of Chiripal Squash Excellence"}, {"tag": "Champions", "date": "Jul 2026", "title": "Gurveer Singh wins team bronze at the World Squash Junior Championships", "body": "At Niagara-on-the-Lake, Canada, Gurveer helped India to bronze in the team event and finished in the top 32 individually. He joined the programme in June 2026 and now competes in the men’s category.", "img": "assets/players/gurveer-3.jpg", "pos": "70% center", "alt": "Gurveer Singh wins team bronze at the World Squash Junior Championships"}, {"tag": "Programme", "date": "[MONTH] 2026", "title": "High Performance Camp with Andrew Shoukry", "body": "Former Egyptian Junior National Coach Andrew Shoukry led an intensive camp for 16 athletes from India and Sri Lanka, in partnership with Shoukry Squash Academy and The Willingdon Sports Club.", "img": "assets/camps/andrew-whiteboard.jpg", "pos": "center center", "alt": "High Performance Camp with Andrew Shoukry"}, {"tag": "Programme", "date": "[DATE]", "title": "Building champions takes an ecosystem", "body": "A conversation on the future of Indian squash with Andrew Shoukry, Ramit Tandon, Vivek Sethia and Ronak Chiripal, produced with The Bridge. 4.83 lakh+ views across five platforms.", "img": "", "pos": "center", "alt": "Building champions takes an ecosystem"}, {"tag": "Programme", "date": "[DATE] 2025", "title": "Three-year partnership with the All Gujarat Squash Racquet Association", "body": "A strategic MoU to develop, promote and professionalise squash across Gujarat, through athlete and coach development, more tournaments, and stronger systems and infrastructure.", "img": "", "pos": "center", "alt": "Three-year partnership with the All Gujarat Squash Racquet Association"}, {"tag": "Beyond squash", "date": "Nov 2025", "title": "Chiripal, Official Partner of the World Boxing Cup Finals", "body": "370+ elite boxers from 30+ countries competed at Shaheed Vijay Pathik Stadium, Greater Noida, 14–21 November 2025.", "img": "", "pos": "center", "alt": "Chiripal, Official Partner of the World Boxing Cup Finals"}];
+    var nf = this.state.nf;
+    all = all.map(function (n, i) {
+      return Object.assign({}, n, { tagUp: n.tag.toUpperCase(), noImg: !n.img, open: function () { self.setState({ art: i }); } });
+    });
+    var news = all.filter(function (n) { return nf === 'All' || n.tag === nf; });
+    var openArt = function (i) { return function (e) { if (e && e.preventDefault) e.preventDefault(); self.setState({ newsOpen: true, art: i }); }; };
+    var a = this.state.art;
+    var ct = this.state.coeType;
+    var thanks = {
+      indiv: 'We will share updates on programmes, locations and opening dates, and invite you to early trials before enrolment opens.',
+      brand: 'Our partnerships team will contact you to share the academy plan and partnership opportunities.',
+      inv: 'Our team will contact you to arrange an introductory conversation and share the project overview, under NDA where needed.',
+      coach: 'We will contact you when coaching roles open. You may be asked to share your CV and certifications.',
+      inst: 'Our team will contact you to discuss how your students or members can be part of the academy.'
+    };
+    var coeBase = 'min-height: 72px; padding: 12px 14px; border: 1px solid #B9C1DA; font-family: inherit; text-align: left; cursor: pointer;';
+    var coeTypes = [['indiv', 'Player or parent', 'Train at the academy'], ['brand', 'Brand / sponsor', 'Partner with us'], ['inv', 'Investor', 'Invest in the academy'], ['coach', 'Coach', 'Work with us'], ['inst', 'School or club', 'Bring your students']].map(function (c) {
+      var on = ct === c[0];
+      return { label: c[1], sub: c[2], on: on ? 'true' : 'false', pick: function () { self.setState({ coeType: c[0] }); },
+        style: coeBase + (on ? 'background: #14215C; color: #FFFFFF; border-color: #14215C;' : 'background: #FFFFFF; color: #14215C;') };
+    });
+    var hints = { 'Partnership': 'Tell us about your organisation and the kind of partnership you have in mind.', 'Athlete management': 'Tell us about the athlete: name, category, ranking and current support.', 'Athlete scholarship': 'Tell us about the player: age, category, ranking and recent results.', 'Media': 'Tell us about your publication or channel and what you would like to cover.', 'Something else': 'How can we help?' };
+    var ctBase = 'min-height: 44px; padding: 0 16px; border: 1px solid #B9C1DA; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer;';
+    var ctypes = ['Partnership', 'Athlete management', 'Athlete scholarship', 'Media', 'Something else'].map(function (c) {
+      var on = self.state.ctype === c;
+      return { label: c, on: on ? 'true' : 'false', pick: function () { self.setState({ ctype: c }); },
+        style: ctBase + (on ? 'background: #14215C; color: #FFFFFF; border-color: #14215C;' : 'background: #FFFFFF; color: #14215C;') };
+    });
+    var cBase = 'min-height: 44px; padding: 0 14px; border: 1px solid #B9C1DA; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer;';
+    var newsChips = ['All', 'Results', 'Champions', 'Programme'].map(function (c) {
+      var on = nf === c;
+      return { label: c, on: on ? 'true' : 'false', pick: function () { self.setState({ nf: c }); },
+        style: cBase + (on ? 'background: #14215C; color: #FFFFFF; border-color: #14215C;' : 'background: #FFFFFF; color: #14215C;') };
+    });
+    return {
+      newsOpen: this.state.newsOpen, news: news, newsChips: newsChips,
+      showArticle: a >= 0, showList: a < 0, art: a >= 0 ? all[a] : {}, dialogLabel: a >= 0 ? all[a].title : 'All news',
+      openSuraj: openArt(2), openAadya: openArt(3), openGurveer: openArt(5),
+      backToList: function () { self.setState({ art: -1 }); },
+      openNews: function (e) { if (e && e.preventDefault) e.preventDefault(); self.setState({ newsOpen: true, nf: 'All', art: -1 }); },
+      closeNews: function () { self.setState({ newsOpen: false }); },
+      contactOpen: this.state.contactOpen, cSent: this.state.cSent, cNotSent: !this.state.cSent, ctypes: ctypes,
+      contactTitle: this.state.ctype === 'Partnership' ? 'Partner with us' : 'Contact us',
+      ctypeLower: (this.state.ctype || 'general').toLowerCase(),
+      msgHint: hints[this.state.ctype] || 'How can we help?',
+      openPartner: function () { self.setState({ contactOpen: true, ctype: 'Partnership', cSent: false }); },
+      openContact: function () { self.setState({ contactOpen: true, ctype: '', cSent: false }); },
+      closeContact: function () { self.setState({ contactOpen: false }); },
+      submitContact: function () { self.setState({ cSent: true }); },
+      coeOpen: this.state.coeOpen, coeTypes: coeTypes, coeSent: this.state.coeSent, coeNotSent: !this.state.coeSent,
+      coeHasType: !!ct, coeNoType: !ct,
+      coeIndiv: ct === 'indiv', coeBrand: ct === 'brand', coeInv: ct === 'inv', coeCoach: ct === 'coach', coeInst: ct === 'inst',
+      coeThanks: thanks[ct] || thanks.indiv,
+      openCoe: function () { self.setState({ coeOpen: true, coeSent: false }); },
+      closeCoe: function () { self.setState({ coeOpen: false }); },
+      submitCoe: function () { self.setState({ coeSent: true }); }
+    };
+  }
+}
+
+</script>
+<script>
+(function(){
+var TPL=document.getElementById('tpl').textContent, root=document.getElementById('root'), comp=new Component({}), H=[];
+function get(c,p){p=p.trim();if(p==='true')return true;if(p==='false')return false;return p.split('.').reduce(function(o,k){return o==null?undefined:o[k]},c)}
+function esc(v){return v==null?'':String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+function proc(t,c){
+ t=t.replace(/<sc-for\s+list="\{\{\s*([\w.]+)\s*\}\}"\s+as="(\w+)"[^>]*>([\s\S]*?)<\/sc-for>/g,function(m,l,as,b){return (get(c,l)||[]).map(function(it,i){var n=Object.assign({},c);n[as]=it;n.$index=i;return proc(b,n)}).join('')});
+ var re=/<sc-if\s+value="\{\{\s*([\w.]+)\s*\}\}"[^>]*>((?:(?!<sc-if)[\s\S])*?)<\/sc-if>/g; while(re.test(t)){re.lastIndex=0; t=t.replace(re,function(m,v,b){return get(c,v)?b:''});}
+ t=t.replace(/onClick="\{\{\s*([\w.]+)\s*\}\}"/gi,function(m,p){H.push(get(c,p));return 'data-h="'+(H.length-1)+'"'});
+ return t.replace(/\{\{\s*([\w.$]+)\s*\}\}/g,function(m,p){return esc(get(c,p))});
+}
+window.__render=function(){
+ var keep={};root.querySelectorAll('input[id],select[id]').forEach(function(e){keep[e.id]=e.type==='checkbox'?e.checked:e.value});
+ H=[];root.innerHTML=proc(TPL,comp.renderVals());
+ root.querySelectorAll('input[id],select[id]').forEach(function(e){if(e.id in keep){if(e.type==='checkbox')e.checked=keep[e.id];else e.value=keep[e.id]}});
+ root.querySelectorAll('[data-h]').forEach(function(e){var f=H[+e.getAttribute('data-h')];if(f)e.addEventListener('click',function(ev){f(ev)})});
+};
+__render();
+})();
+</script>
+</body>
+</html>
